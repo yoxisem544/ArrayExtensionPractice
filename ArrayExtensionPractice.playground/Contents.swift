@@ -40,3 +40,22 @@ dogs.barkkk()
 // wooof
 // wooof
 // ...
+
+struct Cat {
+	func meow() {
+		print("meowwwww")
+	}
+}
+
+extension SequenceType where Generator.Element == Cat {
+	func meowwww() {
+		forEach { $0.meow() }
+	}
+}
+
+let cats = [Cat(),Cat(),Cat(),Cat(),Cat(),Cat(),Cat()]
+cats.meowwww()
+// meowwwww
+// meowwwww
+// meowwwww
+// ...
